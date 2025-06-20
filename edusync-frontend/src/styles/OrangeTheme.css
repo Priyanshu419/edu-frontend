@@ -1,0 +1,186 @@
+/* Orange Theme CSS Variables */
+:root {
+  --primary-color: #FF7F27; /* Main orange */
+  --primary-dark: #E65100; /* Darker orange */
+  --primary-light: #FFAB91; /* Lighter orange */
+  --accent-color: #00796B; /* Teal accent - complementary to orange */
+  --accent-light: #B2DFDB; /* Light teal */
+  --text-on-primary: #FFFFFF; /* White text on orange */
+  --text-primary: #212121; /* Dark gray for main text */
+  --text-secondary: #757575; /* Medium gray for secondary text */
+  --background-light: #FFF3E0; /* Very light orange background */
+  --background-white: #FFFFFF; /* White background */
+  --success-color: #4CAF50; /* Green */
+  --warning-color: #FFC107; /* Amber */
+  --danger-color: #F44336; /* Red */
+  --info-color: #2196F3; /* Blue */
+}
+
+/* Override Bootstrap primary color classes */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+  background-image: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--primary-color) !important;
+  color: var(--text-on-primary) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Custom background classes */
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.bg-light-orange {
+  background-color: var(--background-light) !important;
+}
+
+/* Card customization */
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* Navigation customization */
+.navbar-dark {
+  background-color: var(--primary-dark) !important;
+}
+
+.navbar-light {
+  background-color: var(--background-white) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.btn {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.btn-accent:hover, .btn-accent:focus {
+  background-color: var(--accent-color);
+  filter: brightness(1.1);
+  color: white;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+.display-4 {
+  font-weight: 800;
+}
+
+/* For the hero section diagonal split design */
+.hero-diagonal {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-diagonal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 60%);
+  z-index: -1;
+}
+
+/* Custom list styles */
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 30px;
+}
+
+.custom-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Unique border accent */
+.border-accent-left {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 15px;
+}
+
+.border-accent-bottom {
+  border-bottom: 4px solid var(--primary-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Animation for elements */
+@keyframes float-diagonal-orange {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(30px, -30px) rotate(5deg);
+  }
+  50% {
+    transform: translate(60px, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(30px, 30px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.float-animation {
+  animation: float-diagonal-orange 8s infinite ease-in-out;
+}

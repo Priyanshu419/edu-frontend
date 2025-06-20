@@ -1,0 +1,115 @@
+/* Main Styling */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Navbar customization */
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Card styling */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Button styling */
+.btn {
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Form controls */
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border-color: #86b7fe;
+}
+
+/* Footer styling */
+footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Progress bars */
+.progress {
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* Course cards */
+.course-card img {
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Assessment styling */
+.assessment-question {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.option-item:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  cursor: pointer;
+}
+
+.option-item.selected {
+  background-color: rgba(13, 110, 253, 0.2);
+  border-color: #0d6efd;
+}
+
+/* Charts container */
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* Custom utilities */
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.bg-light-primary {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+

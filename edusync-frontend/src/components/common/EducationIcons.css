@@ -1,0 +1,168 @@
+.education-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none; /* Makes sure clicks pass through */
+  z-index: 1;
+}
+
+.floating-icon {
+  position: absolute;
+  opacity: 0.7;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Positioning and animations for each icon */
+.graduation-cap {
+  top: 15%;
+  left: 10%;
+  animation-name: float-diagonal;
+  animation-delay: 0s;
+}
+
+.book {
+  top: 30%;
+  right: 15%;
+  animation-name: float-zigzag;
+  animation-delay: 2s;
+}
+
+.science {
+  bottom: 25%;
+  left: 20%;
+  animation-name: float-circular;
+  animation-delay: 1s;
+}
+
+.calculator {
+  top: 20%;
+  right: 30%;
+  animation-name: float-bounce;
+  animation-delay: 3s;
+}
+
+.globe {
+  bottom: 30%;
+  right: 25%;
+  animation-name: float-pulse;
+  animation-delay: 1.5s;
+}
+
+.atom {
+  top: 40%;
+  left: 30%;
+  animation-name: float-diagonal-reverse;
+  animation-delay: 2.5s;
+}
+
+.ruler {
+  bottom: 20%;
+  left: 40%;
+  animation-name: float-bounce;
+  animation-delay: 0.5s;
+}
+
+/* Animation keyframes */
+@keyframes float-diagonal {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(40px, 40px) rotate(10deg);
+  }
+  50% {
+    transform: translate(0, 80px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-40px, 40px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-diagonal-reverse {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-40px, 40px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(0, 80px) rotate(0deg);
+  }
+  75% {
+    transform: translate(40px, 40px) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-zigzag {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(60px, 20px) rotate(15deg);
+  }
+  50% {
+    transform: translate(0, 40px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-60px, 20px) rotate(-15deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-circular {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(30px, 10px) rotate(10deg);
+  }
+  50% {
+    transform: translate(50px, 50px) rotate(0deg);
+  }
+  75% {
+    transform: translate(10px, 30px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-bounce {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes float-pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.3) rotate(10deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+}

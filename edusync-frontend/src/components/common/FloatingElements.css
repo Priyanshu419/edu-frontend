@@ -1,0 +1,200 @@
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none; /* Makes sure clicks pass through */
+  z-index: 1;
+}
+
+.floating-element {
+  position: absolute;
+  opacity: 0.6;
+  font-size: 2rem;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Define different positions and animations for each element */
+.book-1 {
+  top: 20%;
+  left: 15%;
+  font-size: 1.8rem;
+  animation-name: float-diagonal;
+  animation-delay: 0s;
+}
+
+.book-2 {
+  top: 40%;
+  right: 10%;
+  font-size: 2.2rem;
+  animation-name: float-zigzag;
+  animation-delay: 1s;
+}
+
+.book-3 {
+  bottom: 25%;
+  left: 30%;
+  font-size: 1.5rem;
+  animation-name: float-circular;
+  animation-delay: 3s;
+}
+
+.code-1 {
+  top: 15%;
+  right: 25%;
+  font-size: 2.5rem;
+  animation-name: float-diagonal-reverse;
+  animation-delay: 2s;
+}
+
+.laptop {
+  bottom: 20%;
+  right: 20%;
+  font-size: 2.8rem;
+  animation-name: float-bounce;
+  animation-delay: 4s;
+}
+
+.certificate {
+  top: 30%;
+  left: 40%;
+  font-size: 2rem;
+  animation-name: float-pulse;
+  animation-delay: 0.5s;
+}
+
+.graph {
+  bottom: 35%;
+  right: 35%;
+  font-size: 1.7rem;
+  animation-name: float-zigzag;
+  animation-delay: 2.5s;
+}
+
+.people {
+  top: 10%;
+  left: 25%;
+  font-size: 1.9rem;
+  animation-name: float-circular;
+  animation-delay: 1.5s;
+}
+
+.chat {
+  bottom: 15%;
+  left: 15%;
+  font-size: 1.6rem;
+  animation-name: float-diagonal;
+  animation-delay: 3.5s;
+}
+
+.lightbulb {
+  top: 25%;
+  right: 15%;
+  font-size: 2.1rem;
+  animation-name: float-pulse;
+  animation-delay: 2s;
+}
+
+/* Animation keyframes */
+@keyframes float-diagonal {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(50px, 50px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 100px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50px, 50px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-diagonal-reverse {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50px, 50px) rotate(-5deg);
+  }
+  50% {
+    transform: translate(0, 100px) rotate(0deg);
+  }
+  75% {
+    transform: translate(50px, 50px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-zigzag {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(70px, 30px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 60px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-70px, 30px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-circular {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(50px, 20px) rotate(10deg);
+  }
+  50% {
+    transform: translate(70px, 70px) rotate(0deg);
+  }
+  75% {
+    transform: translate(20px, 50px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes float-bounce {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes float-pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2) rotate(5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+}
